@@ -1,25 +1,30 @@
 import { createBrowserRouter } from "react-router";
-import About from "./pages/About/index.jsx";
-import Error from "./pages/Error/index.jsx";
-import Home from "./pages/Home/index.jsx";
-import Logement from "./pages/Logement/index.jsx";
+import Layout from "./components/Layout";
+import About from "./pages/About";
+import Error from "./pages/Error";
+import Home from "./pages/Home";
+import Logement from "./pages/Logement";
 
 const routers = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/logement/:id",
-    element: <Logement />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "*",
-    element: <Error />,
+    element: <Layout />,
+    errorElement: <Error />,
+
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "logement/:id",
+        element: <Logement />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+    ],
   },
 ]);
 
