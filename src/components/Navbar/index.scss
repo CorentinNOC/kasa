@@ -1,7 +1,11 @@
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  img {
+    object-fit: contain;
+  }
 
   nav {
     a {
@@ -13,6 +17,22 @@ header {
       &:hover {
         text-decoration-color: #000;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+
+    img {
+      width: 145px;
+      height: 45px;
+    }
+
+    nav a {
+      font-size: 12px;
+      padding: 0 12.5px;
     }
   }
 }

@@ -1,0 +1,49 @@
+.banner {
+  width: 100%;
+  margin-bottom: 40px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  position: relative;
+  height: 223px;
+  overflow: hidden;
+  border-radius: 25px;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &::before {
+    content: "";
+    border-radius: 25px;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 48px;
+    white-space: nowrap;
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    margin-bottom: 20px;
+    height: 111px;
+
+    h1 {
+      width: 200px;
+      white-space: unset;
+      font-size: 24px;
+      left: 15px;
+      right: 50%;
+      transform: translatey(-50%);
+    }
+  }
+}
