@@ -4,7 +4,7 @@ import "./index.scss";
 
 export default function Navbar() {
   return (
-    <header>
+    <header className="header">
       <Link to="/">
         <img src={logoRed} alt="Logo du site Kasa" width={210} height={70} />
       </Link>
