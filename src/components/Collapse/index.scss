@@ -1,0 +1,47 @@
+.collapse__container {
+  overflow: hidden;
+
+  &.collapsed {
+    .collapse__content {
+      transform: translateY(0);
+      max-height: 300px;
+    }
+
+    .collapse__toggle {
+      transform: rotate(180deg);
+    }
+  }
+
+  .collapse__title {
+    display: flex;
+    border-radius: 5px;
+
+    cursor: pointer;
+    align-items: center;
+    font-size: 24px;
+    justify-content: space-between;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 1;
+    background-color: var(--primary-color);
+    color: #fff;
+
+    .collapse__toggle {
+      transition: 0.5s;
+    }
+  }
+
+  .collapse__content {
+    overflow: hidden;
+    font-size: 18px;
+    border-radius: 0 0 5px 5px;
+    background-color: var(--secondary-color);
+    max-height: 0;
+    transition: 0.5s;
+    transform: translateY(-50px);
+
+    .collapse__paragraph {
+      padding: 20px;
+    }
+  }
+}
