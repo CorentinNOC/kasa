@@ -65,7 +65,7 @@ function Carrousel({ images }) {
       >
         {images?.map((image, i) => (
           <figure key={i}>
-            <img src={image} alt="" />
+            <img src={image} alt="Photo du logement" />
           </figure>
         ))}
       </div>
