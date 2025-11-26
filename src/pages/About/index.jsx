@@ -14,8 +14,6 @@ function About() {
     return <span>Oups, il y a un problème</span>;
   }
 
-  console.log(abouts);
-
   return (
     <>
       <Banner image={aboutBanner} />

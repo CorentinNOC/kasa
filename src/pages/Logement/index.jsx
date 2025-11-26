@@ -17,7 +17,6 @@ function Logement() {
     return <span>Oups, il y a un problème</span>;
   }
 
-  console.log(logement);
   return (
     <>
       {isLoading ? (

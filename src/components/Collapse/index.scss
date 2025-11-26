@@ -53,3 +53,24 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .collapse__container {
+    .collapse__title {
+      font-size: 13px;
+      padding: 10px;
+
+      img {
+        width: 16px;
+      }
+    }
+
+    .collapse__content {
+      font-size: 12px;
+
+      ul {
+        font-size: 12px;
+      }
+    }
+  }
+}

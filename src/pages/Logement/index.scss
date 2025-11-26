@@ -1,5 +1,6 @@
 .collapse__accommodation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
   article {
@@ -8,7 +9,9 @@
 }
 
 @media screen and (max-width: 768px) {
-  .collapse__wrapper {
+  .collapse__accommodation {
+    gap: 20px;
+
     article {
       flex: 0 0 100%;
     }

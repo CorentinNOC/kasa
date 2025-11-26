@@ -10,7 +10,6 @@ function Rating({ ratingsScore }) {
           key={index}
           src={index < ratingsScore ? starOrange : starGrey}
           alt="star"
-          style={{ width: "20px", height: "20px" }}
         />
       ))}
     </div>
