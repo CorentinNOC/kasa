@@ -1,0 +1,19 @@
+.collapse__accommodation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  article {
+    flex: 0 0 calc(100% / 2 - 38px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .collapse__accommodation {
+    gap: 20px;
+
+    article {
+      flex: 0 0 100%;
+    }
+  }
+}

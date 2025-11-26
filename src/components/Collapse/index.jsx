@@ -17,7 +17,11 @@ function Collapse({ title, content }) {
         <img className="collapse__toggle" src={arrowBack} alt="Chevron" />
       </div>
       <div className="collapse__content">
-        <p className="collapse__paragraph">{content}</p>
+        {typeof content === "string" ? (
+          <p className="collapse__paragraph">{content}</p>
+        ) : (
+          content
+        )}
       </div>
     </article>
   );
