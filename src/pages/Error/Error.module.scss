@@ -1,0 +1,30 @@
+@use "../../styles/index" as *;
+
+.container {
+  @include flex-col(140px, center, center);
+  flex: 1;
+
+  @include laptop {
+    gap: 110px;
+  }
+}
+
+.code {
+  font-size: 288px;
+  font-weight: 700;
+  color: $primary;
+
+  @include laptop {
+    font-size: 96px;
+  }
+}
+
+.message {
+  font-size: 36px;
+  color: $primary;
+}
+
+.link {
+  font-size: $fs-md;
+  color: $black;
+}
