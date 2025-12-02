@@ -1,5 +1,5 @@
 import Rating from "../Rating";
-import "./index.scss";
+import styles from "./AccommodationDescription.module.scss";
 
 function AccommodationDescription({
   title,
@@ -10,20 +10,20 @@ function AccommodationDescription({
   rating,
 }) {
   return (
-    <section className="accommodation__container">
-      <article className="accommodation__description">
-        <div className="accommodation__title">
+    <section className={styles.container}>
+      <article className={styles.description}>
+        <div className={styles.title}>
           <h1>{title}</h1>
           <p>{location}</p>
         </div>
-        <ul className="accommodation__tags">
+        <ul className={styles.tags}>
           {tags?.map((tag, index) => (
             <li key={index}>{tag}</li>
           ))}
         </ul>
       </article>
-      <article className="accommodation__host">
-        <div className="accommodation__information">
+      <article className={styles.host}>
+        <div className={styles.information}>
           <p>{host}</p>
           <img src={picture} alt={`Photo de ${host}`} />
         </div>

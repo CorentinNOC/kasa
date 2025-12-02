@@ -1,24 +1,21 @@
 import { useState } from "react";
 import arrowBack from "../../assets/images/arrow-back.svg";
-import "./index.scss";
+import style from "./Collapse.module.scss";
 
 function Collapse({ title, content }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <article
-      className={`collapse__container ${isCollapsed ? "collapsed" : ""}`}
+      className={`${style.container} ${isCollapsed ? style.collapsed : ""}`}
     >
-      <div
-        className="collapse__title"
-        onClick={() => setIsCollapsed(!isCollapsed)}
-      >
+      <div className={style.title} onClick={() => setIsCollapsed(!isCollapsed)}>
         <p>{title}</p>
-        <img className="collapse__toggle" src={arrowBack} alt="Chevron" />
+        <img className={style.toggle} src={arrowBack} alt="Chevron" />
       </div>
-      <div className="collapse__content">
+      <div className={style.content}>
         {typeof content === "string" ? (
-          <p className="collapse__paragraph">{content}</p>
+          <p className={style.paragraph}>{content}</p>
         ) : (
           content
         )}

@@ -1,0 +1,21 @@
+@use "../../styles/index" as *;
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px 60px;
+  background: $secondary;
+  border-radius: $br-lg;
+  padding: 50px;
+
+  @include laptop {
+    gap: 20px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background: none;
+    padding: 0;
+  }
+}

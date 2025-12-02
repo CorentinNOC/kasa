@@ -1,0 +1,66 @@
+@use "../../styles/index" as *;
+
+.container {
+  position: relative;
+  border-radius: $br-lg;
+  overflow: hidden;
+}
+
+/* Navigation */
+.nav {
+  @include flex-row($align: center, $justify: space-between);
+  @include absolute-fill;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 25px;
+  pointer-events: none;
+  z-index: 2;
+
+  img {
+    max-height: 80px;
+    cursor: pointer;
+    pointer-events: all;
+  }
+}
+
+/* Pagination */
+.pagination {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $white;
+  font-size: $fs-md;
+  z-index: 2;
+}
+
+/* Slides */
+.wrapper {
+  display: flex;
+
+  figure {
+    flex: 0 0 100%;
+
+    img {
+      height: 415px;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+@include tablet {
+  .nav img {
+    width: 11px;
+  }
+
+  .pagination {
+    display: none;
+  }
+
+  .wrapper figure img {
+    height: 255px;
+  }
+}

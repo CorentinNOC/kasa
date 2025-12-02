@@ -1,7 +1,7 @@
-import "./index.scss";
+import style from "./Loader.module.scss";
 
 function Loader() {
-  return <div className="loader"></div>;
+  return <div className={style.loader}></div>;
 }
 
 export default Loader;

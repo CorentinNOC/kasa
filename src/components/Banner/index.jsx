@@ -1,8 +1,8 @@
-import "./index.scss";
+import style from "./Banner.module.scss";
 
 const Banner = ({ image, title }) => (
   <section
-    className={"banner"}
+    className={style.banner}
     style={{
       backgroundImage: `url(${image})`,
     }}
