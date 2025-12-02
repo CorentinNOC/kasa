@@ -1,16 +1,29 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import logoRed from "../../assets/images/logo-red.webp";
-import "./index.scss";
+import style from "./Navbar.module.scss";
 
 export default function Navbar() {
   return (
-    <header className="header">
+    <header className={style.header}>
       <Link to="/">
         <img src={logoRed} alt="Logo du site Kasa" width={210} height={70} />
       </Link>
+
       <nav>
-        <Link to="/">Accueil</Link>
-        <Link to="/about">À propos</Link>
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) => (isActive ? style.active : "")}
+        >
+          Accueil
+        </NavLink>
+
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? style.active : "")}
+        >
+          À propos
+        </NavLink>
       </nav>
     </header>
   );

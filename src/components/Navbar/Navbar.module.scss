@@ -1,7 +1,7 @@
+@use "../../styles/index" as *;
+
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex-row(0, center, space-between);
 
   img {
     object-fit: contain;
@@ -9,20 +9,23 @@
 
   nav {
     a {
-      color: #000;
+      color: $black;
       text-decoration-color: transparent;
       padding: 0 27.5px;
       transition: 0.5s;
 
+      &.active {
+        text-decoration: underline;
+        color: $black;
+      }
+
       &:hover {
-        text-decoration-color: #000;
+        text-decoration-color: $black;
       }
     }
   }
-}
 
-@media screen and (max-width: 768px) {
-  .header {
+  @include tablet {
     flex-wrap: wrap;
 
     img {
@@ -31,7 +34,7 @@
     }
 
     nav a {
-      font-size: 12px;
+      font-size: $fs-xs;
       padding: 0 12.5px;
     }
   }
