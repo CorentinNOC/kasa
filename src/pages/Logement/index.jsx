@@ -4,7 +4,7 @@ import Carrousel from "../../components/Carrousel";
 import Collapse from "../../components/Collapse";
 import Loader from "../../components/Loader";
 import { useFetch } from "../../utils/hooks";
-import "./index.scss";
+import style from "./Logement.module.scss";
 
 function Logement() {
   const { id } = useParams();
@@ -36,7 +36,7 @@ function Logement() {
         tags={logement.tags}
         rating={logement.rating}
       />
-      <section className="collapse__accommodation">
+      <section className={style.collapse}>
         <Collapse title={"Description"} content={logement.description} />
         <Collapse
           title="Équipements"

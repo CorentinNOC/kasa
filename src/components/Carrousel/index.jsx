@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import arrowNext from "../../assets/images/arrow-next.svg";
-import "./index.scss";
-
 import arrowPrevious from "../../assets/images/arrow-previous.svg";
+import styles from "./Carousel.module.scss";
 
 function Carrousel({ images }) {
   const wrapperRef = useRef(null);
@@ -42,21 +41,21 @@ function Carrousel({ images }) {
   }
 
   return (
-    <section className="carrousel__container">
+    <section className={styles.container}>
       {images.length != 1 && (
         <>
-          <div className="carrousel__nav">
+          <div className={styles.nav}>
             <img onClick={previous} src={arrowPrevious} alt="" />
             <img onClick={next} src={arrowNext} alt="" />
           </div>
-          <span className="carrousel__pagination">{`${index + 1}/${
+          <span className={styles.pagination}>{`${index + 1}/${
             images.length
           }`}</span>
         </>
       )}
 
       <div
-        className="carrousel__wrapper"
+        className={styles.wrapper}
         ref={wrapperRef}
         style={{
           transform: `translateX(-${index * imgWidth}px)`,

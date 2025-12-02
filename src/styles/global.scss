@@ -60,6 +60,12 @@ table {
   margin: 0 auto;
   padding-top: 45px;
 
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
   > *:not(footer) {
     padding: 0 100px 50px;
   }

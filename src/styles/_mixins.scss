@@ -14,7 +14,7 @@
 }
 
 // Flex helpers
-@mixin flex-col($gap: 0, $align: stretch, $justify: flex-start) {
+@mixin flex-col($gap: 0, $align: unset, $justify: flex-start) {
   display: flex;
   flex-direction: column;
   gap: $gap;
@@ -22,7 +22,7 @@
   justify-content: $justify;
 }
 
-@mixin flex-row($gap: 0, $align: center, $justify: flex-start) {
+@mixin flex-row($gap: 0, $align: unset, $justify: flex-start) {
   display: flex;
   flex-direction: row;
   gap: $gap;

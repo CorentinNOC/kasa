@@ -1,0 +1,14 @@
+@use "../../styles/index" as *;
+
+.rating {
+  @include flex-row($gap-md);
+
+  @include tablet {
+    gap: $gap-sm;
+
+    img {
+      width: 14px;
+      height: 13px;
+    }
+  }
+}

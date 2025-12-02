@@ -1,0 +1,21 @@
+@use "../../styles/index" as *;
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  margin: 0 auto;
+  padding: 10px;
+  border: 6px solid $primary;
+  border-bottom-color: transparent;
+  border-radius: 22px;
+  animation: spin 1s linear infinite;
+  width: 0;
+  height: 0;
+}
