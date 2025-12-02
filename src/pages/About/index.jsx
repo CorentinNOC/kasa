@@ -3,7 +3,7 @@ import Banner from "../../components/Banner";
 import Collapse from "../../components/Collapse";
 import Loader from "../../components/Loader";
 import { useFetch } from "../../utils/hooks";
-import "./index.scss";
+import style from "./About.module.scss";
 
 function About() {
   const { data, isLoading, error } = useFetch("/about.json");
@@ -20,7 +20,7 @@ function About() {
       {isLoading ? (
         <Loader />
       ) : (
-        <section className="collapse__wrapper">
+        <section className={style.wrapper}>
           {abouts?.map((about, index) => (
             <Collapse
               key={index}

@@ -1,0 +1,10 @@
+@use "../../styles/index" as *;
+
+.wrapper {
+  @include flex-row($gap-lg);
+  flex-wrap: wrap;
+
+  @include tablet {
+    gap: $gap-md;
+  }
+}
