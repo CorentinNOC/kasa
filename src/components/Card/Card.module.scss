@@ -1,0 +1,60 @@
+@use "../../styles/index" as *;
+
+.card {
+  flex: 0 0 calc(100% / 3 - 40px);
+  border-radius: $br-md;
+  overflow: hidden;
+  color: $white;
+  text-decoration: none;
+  transition: 0.4s;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 4px #0003;
+  }
+}
+
+.article {
+  position: relative;
+  height: 340px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  &::after {
+    @include absolute-fill;
+    content: "";
+    background: linear-gradient(#0000, #0006);
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  p {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    z-index: 1;
+    margin: 0;
+  }
+}
+
+@include laptop {
+  .card {
+    flex: 0 0 calc(100% / 2 - 10px);
+  }
+}
+
+@include tablet {
+  .card {
+    flex: 0 0 100%;
+  }
+
+  .article {
+    height: 255px;
+  }
+}

@@ -1,7 +1,7 @@
 import { useFetch } from "../../utils/hooks";
 import Card from "../Card";
 import Loader from "../Loader";
-import "./index.scss";
+import style from "./Gallery.module.scss";
 
 function Gallery() {
   const { data, isLoading, error } = useFetch("/logements.json");
@@ -13,7 +13,7 @@ function Gallery() {
   }
 
   return (
-    <section className="home__gallery">
+    <section className={style.gallery}>
       {isLoading ? (
         <Loader />
       ) : (
