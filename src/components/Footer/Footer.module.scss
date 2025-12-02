@@ -1,0 +1,8 @@
+@use "../../styles/index" as *;
+
+.footer {
+  @include flex-col($gap-xl, center);
+  background-color: $black;
+  color: $white;
+  padding: 65px 0 30px;
+}
