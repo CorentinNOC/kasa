@@ -14,17 +14,22 @@
 }
 
 // Flex helpers
-@mixin flex-col($gap: 0, $align: unset, $justify: flex-start) {
+@mixin flex-col(
+  $gap: 0,
+  $align: unset,
+  $justify: flex-start,
+  $direction: column
+) {
   display: flex;
-  flex-direction: column;
+  flex-direction: $direction;
   gap: $gap;
   align-items: $align;
   justify-content: $justify;
 }
 
-@mixin flex-row($gap: 0, $align: unset, $justify: flex-start) {
+@mixin flex-row($gap: 0, $align: unset, $justify: flex-start, $direction: row) {
   display: flex;
-  flex-direction: row;
+  flex-direction: $direction;
   gap: $gap;
   align-items: $align;
   justify-content: $justify;
