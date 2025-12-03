@@ -5,13 +5,14 @@
   padding: 25px 0;
 
   @include tablet {
-    @include flex-col($gap-sm);
+    @include flex-col($gap-md);
+    padding: 15px 0;
   }
 }
 
 /* DESCRIPTION */
 .description {
-  @include flex-col($gap-md, stretch, space-between);
+  @include flex-col($gap-lg, stretch, space-between);
 
   @include tablet {
     gap: $gap-sm;
@@ -22,6 +23,7 @@
   h1 {
     font-size: $fs-xl;
     color: $primary;
+    font-weight: 500;
 
     @include tablet {
       font-size: $fs-sm * 1.3;
@@ -30,7 +32,6 @@
 
   p {
     font-size: $fs-md;
-    margin-top: 10px;
 
     @include tablet {
       font-size: $fs-sm;
@@ -60,10 +61,10 @@
 
 /* HOST */
 .host {
-  @include flex-col($gap-md, flex-end);
+  @include flex-col($gap-md, flex-end, space-between);
 
   @include tablet {
-    @include flex-row($gap-sm, center, flex-end);
+    @include flex-row($gap-sm, center, space-between, row-reverse);
   }
 }
 

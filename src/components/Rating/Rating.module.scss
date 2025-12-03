@@ -2,9 +2,11 @@
 
 .rating {
   @include flex-row($gap-md);
+  padding-bottom: 5px;
 
   @include tablet {
     gap: $gap-sm;
+    padding-bottom: 0;
 
     img {
       width: 14px;
