@@ -20,11 +20,22 @@
 }
 
 .message {
-  font-size: 36px;
+  font-size: $fs-xl;
   color: $primary;
+
+  @include tablet {
+    font-size: $fs-md;
+    text-align: center;
+    width: 200px;
+  }
 }
 
 .link {
   font-size: $fs-md;
   color: $black;
+  text-decoration: underline;
+
+  @include tablet {
+    font-size: $fs-sm;
+  }
 }
