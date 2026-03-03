@@ -1,16 +1,67 @@
-# React + Vite
+# Projet Kasa – Application de location immobilière
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Contexte
 
-Currently, two official plugins are available:
+Le projet **Kasa** consiste à développer une application front-end pour une plateforme de location d’appartements entre particuliers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ce projet a été réalisé dans le cadre de la formation Développeur Web chez OpenClassrooms.
 
-## React Compiler
+Suite à une refonte complète de son système, l’entreprise souhaite migrer vers une stack moderne basée sur React afin d’améliorer la maintenabilité, la performance et l’expérience utilisateur.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+L’enjeu principal était de concevoir une application Single Page Application (SPA) performante et modulaire, en respectant des maquettes précises et en mettant en place une architecture de composants réutilisables.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Objectifs
+
+- Développer une application en React à partir de maquettes Figma
+- Mettre en place un système de routage dynamique
+- Créer des composants réutilisables et modulaires
+- Gérer les données via un fichier JSON simulant une API
+- Implémenter une page 404 fonctionnelle
+- Respecter les bonnes pratiques de développement React
+- Assurer la responsivité sur mobile, tablette et desktop
+
+---
+
+## Stack technique
+
+- React (Create React App)
+- React Router
+- JavaScript (ES6+)
+- HTML5
+- CSS3 / Sass
+- Node.js
+- Git & GitHub
+
+---
+
+## Compétences développées
+
+- Création et structuration d’une SPA avec React
+- Gestion du routage avec React Router
+- Manipulation des props et gestion des composants dynamiques
+- Organisation d’une architecture de projet scalable
+- Gestion d’erreurs et routes inexistantes
+- Mise en place d’animations CSS (menus déroulants)
+- Respect des principes DRY et réutilisabilité des composants
+
+---
+
+## Résultats et impact
+
+- Application entièrement fonctionnelle en React
+- Navigation fluide sans rechargement de page
+- Code modulaire et maintenable
+- Interface responsive conforme aux maquettes
+- Implémentation d’une gestion d’erreur 404
+- Validation du projet par OpenClassrooms
+
+---
+
+## Perspectives d'amélioration
+
+- Connexion à une API réelle (backend Node/Express ou autre)
+- Mise en place d’un système d’authentification utilisateur
+- Ajout de tests unitaires et tests d’intégration (Jest / React Testing Library)
+- Migration vers Vite pour améliorer les performances de build
