@@ -6,7 +6,9 @@ import { useFetch } from "../../utils/hooks";
 import style from "./About.module.scss";
 
 function About() {
-  const { data, isLoading, error } = useFetch("/about.json");
+  const { data, isLoading, error } = useFetch(
+    `${import.meta.env.BASE_URL}about.json`,
+  );
 
   const abouts = data;
 

@@ -9,7 +9,9 @@ import style from "./Logement.module.scss";
 function Logement() {
   const { id } = useParams();
 
-  const { data, isLoading, error } = useFetch(`/logements.json`);
+  const { data, isLoading, error } = useFetch(
+    `${import.meta.env.BASE_URL}logements.json`,
+  );
 
   if (isLoading) {
     return <Loader />;

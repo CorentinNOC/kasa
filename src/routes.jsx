@@ -5,34 +5,39 @@ import Error from "./pages/Error";
 import Home from "./pages/Home";
 import Logement from "./pages/Logement";
 
-const routers = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
+const routers = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
 
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "logement/:id",
-        element: <Logement />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "404",
-        element: <Error />,
-      },
-      {
-        path: "*",
-        element: <Error />,
-      },
-    ],
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "logement/:id",
+          element: <Logement />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+        {
+          path: "404",
+          element: <Error />,
+        },
+        {
+          path: "*",
+          element: <Error />,
+        },
+      ],
+    },
+  ],
+  {
+    basename: "/kasa/",
   },
-]);
+);
 
 export default routers;
